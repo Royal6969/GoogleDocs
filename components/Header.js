@@ -3,7 +3,7 @@ import Icon from '@material-tailwind/react/Icon';
 
 function Header() {
     return (
-        <div className="sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-white"> {/* we set white color because default is transparent */}
+        <header className="sticky top-0 z-50 flex items-center px-4 py-2 shadow-md bg-white"> {/* we set white color because default is transparent */}
             <Button
                 color="gray"
                 buttonType="outline"
@@ -46,7 +46,7 @@ function Header() {
                 src="https://lh3.googleusercontent.com/ogw/ADea4I78I_1PWxqEBYdllRJPTETWi0vo3qoVHXiDAIbu4O0=s64-c-mo" // user.photo??
                 alt=""
             />
-        </div>
+        </header>
     );
 }
 
