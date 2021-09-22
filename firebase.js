@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from 'firebase'; // npm i firebase@^8.10.0
 
 const firebaseConfig = {
     apiKey: "AIzaSyBKJm02UpoamWJAsfesCRgrsi2xaXwYroo",

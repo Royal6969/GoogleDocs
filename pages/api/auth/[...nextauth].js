@@ -1,12 +1,13 @@
-import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/GoogleProvider";
-import { FirebaseAdapter } from '@next-auth/firebase-adapter';
+import NextAuth from "next-auth"; // npm install --save next-auth
+import { FirebaseAdapter } from '@next-auth/firebase-adapter'; // npm install next-auth @next-auth/firebase-adapter
 import { db } from '../../../firebase';
+// import { providers } from "next-auth/client"; // seems it is not necessary
+import Providers from "next-auth/providers";
 
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
-    GoogleProvider({
+      Providers.Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
