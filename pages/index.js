@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { db } from '../firebase';
 import firebase from 'firebase';
 import { useCollectionOnce } from 'react-firebase-hooks/firestore';
+import DocumentRow from '../components/DocumentRow';
 
 export default function Home() {
 
@@ -127,18 +128,18 @@ export default function Home() {
             <p className="mr-12">Date Created</p>
             <Icon name="folder" size="3xl" color="gray" />
           </div>
+        
+
+          {snapshot?.docs.map((doc) => (
+            <DocumentRow 
+              key={doc.id}
+              id={doc.id}
+              fileName={doc.data().fileName}
+              date={doc.data().timestamp}
+            />
+          ))}
         </div>
-
-        {snapshot?.docs.map((doc) => (
-          <DocumentRow 
-            key={doc.id}
-            id={doc.id}
-            fileName={doc.data().fileName}
-            date={doc.data().timestamp}
-          />
-        ))}
       </section>
-
     </div>
   );
 }
