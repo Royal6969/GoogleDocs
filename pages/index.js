@@ -21,7 +21,7 @@ export default function Home() {
 
   const [showModal, setShowModal] = useState(false);
   const [input, setInput] = useState("");
-  const [snapshot] = useCollectionOnce(
+  const [snapshot] = useCollectionOnce( // npm install react-firebase-hooks
     db
       .collection('userDocs')
       .doc(session.user.email)

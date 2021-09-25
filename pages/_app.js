@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css'; // npx create-next-app -e with-tailwindcss go
 import '@material-tailwind/react/tailwind.css'; // npm i -E @material-tailwind/react
 import Head from 'next/head';
 import { Provider } from 'next-auth/client';
+import '../styles.css';
 
 function MyApp({ Component, pageProps }) {
   return (
