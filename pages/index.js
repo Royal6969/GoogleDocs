@@ -78,7 +78,7 @@ export default function Home() {
           onClick={createDocument}
           ripple="light"
         >
-          Create
+          Create 
         </Button>
       </ModalFooter>
 
