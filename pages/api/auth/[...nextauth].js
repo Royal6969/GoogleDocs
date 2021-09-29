@@ -10,7 +10,7 @@ export default NextAuth({
       Providers.Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      redirect: process.env.GOOGLE_REDIRECT_URL,
+      redirect: process.env.GOOGLE_REDIRECT_URL, // This is really necesary ??
     }),
     // ...add more providers here
   ],
